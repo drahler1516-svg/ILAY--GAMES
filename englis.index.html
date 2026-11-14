@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Quest - Grade 7 Exam Prep (116 Words)</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #3730a3;
+      --primary-light: #e0e7ff;
+      --secondary: #10b981;
+      --secondary-dark: #059669;
+      --accent: #f59e0b;
+      --danger: #ef4444;
+      --bg: #f1f5f9;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 4px 10px -6px rgba(15, 23, 42, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, var(--primary), #7c3aed);
+      color: white;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    .stats-bar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .stat-pill {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    main {
+      max-width: 1060px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+      flex: 1;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #312e81 0%, #4f46e5 55%, #7c3aed 100%);
+      color: white;
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-emojis {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .hero-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      opacity: 0.9;
+      margin-bottom: 6px;
+    }
+
+    .hero h1 {
+      font-size: 2.15rem;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 span {
+      color: #fde047;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      opacity: 0.95;
+      max-width: 650px;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn-start {
+      background: #fde047;
+      color: #1e1b4b;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    }
+
+    .btn-start:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.22);
+    }
+
+    .xp-box {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(6px);
+      padding: 12px 18px;
+      border-radius: 14px;
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+
+    .xp-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .xp-track {
+      background: rgba(0, 0, 0, 0.25);
+      height: 10px;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .xp-fill {
+      background: #fde047;
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      transition: width 0.4s ease;
+    }
+
+    /* List Selector Bar */
+    .scope-bar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 18px;
+      margin-bottom: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .scope-label {
+      font-weight: 800;
+      font-size: 0.98rem;
+      color: var(--text);
+    }
+
+    .scope-select {
+      padding: 8px 14px;
+      border-radius: 10px;
+      border: 2px solid var(--primary-light);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+      background: #f8fafc;
+      cursor: pointer;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-size: 0.98rem;
+    }
+
+    /* Games Grid */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+      gap: 18px;
+      margin-bottom: 42px;
+    }
+
+    .game-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .game-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+    }
+
+    .game-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .game-icon {
+      font-size: 1.9rem;
+      background: var(--primary-light);
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .game-badge {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 4px 10px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .game-card h3 {
+      font-size: 1.22rem;
+      margin-bottom: 6px;
+    }
+
+    .game-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+      line-height: 1.45;
+    }
+
+    .game-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+
+    .stars-display {
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+    }
+
+    .star-dim {
+      opacity: 0.25;
+      filter: grayscale(1);
+    }
+
+    .play-link {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    /* Search & Filter Tabs */
+    .vocab-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tab-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .search-input {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.92rem;
+      min-width: 210px;
+      background: var(--card);
+    }
+
+    /* Word Cards Grid */
+    .words-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+      gap: 14px;
+    }
+
+    .word-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 12px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      transition: transform 0.15s, border-color 0.15s, background 0.2s;
+      position: relative;
+      min-height: 135px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .word-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+    }
+
+    .word-card.flipped {
+      background: #eef2ff;
+      border-color: var(--primary);
+    }
+
+    .speaker-btn {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: var(--bg);
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .speaker-btn:hover {
+      background: var(--primary-light);
+    }
+
+    .word-en {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      direction: ltr;
+      margin-bottom: 4px;
+    }
+
+    .word-pron {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .word-he {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--secondary-dark);
+    }
+
+    .tap-hint {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      margin-top: 6px;
+    }
+
+    /* Active Game Screen */
+    #game-screen {
+      display: none;
+      background: var(--card);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .game-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-back {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    .btn-back:hover {
+      background: #e2e8f0;
+    }
+
+    .progress-dots {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--border);
+    }
+
+    .dot.active { background: var(--primary); }
+    .dot.correct { background: var(--secondary); }
+    .dot.wrong { background: var(--danger); }
+
+    .question-box {
+      text-align: center;
+      margin: 18px 0;
+    }
+
+    .en-sentence {
+      direction: ltr;
+      font-size: 1.38rem;
+      font-weight: 700;
+      color: var(--text);
+      background: #f8fafc;
+      border: 2px dashed #cbd5e1;
+      padding: 20px;
+      border-radius: 16px;
+      margin: 14px 0;
+      line-height: 1.6;
+    }
+
+    .story-box {
+      direction: ltr;
+      text-align: left;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      padding: 20px;
+      border-radius: 16px;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      margin-bottom: 20px;
+      color: #1e293b;
+    }
+
+    .story-box strong {
+      color: var(--primary);
+      background: #e0e7ff;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .option-btn {
+      background: var(--card);
+      border: 2px solid var(--border);
+      padding: 15px;
+      border-radius: 14px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+      color: var(--text);
+    }
+
+    .option-btn:hover:not(:disabled) {
+      border-color: var(--primary);
+      background: #f5f3ff;
+    }
+
+    .option-btn.correct {
+      background: #d1fae5;
+      border-color: var(--secondary);
+      color: #065f46;
+    }
+
+    .option-btn.wrong {
+      background: #fee2e2;
+      border-color: var(--danger);
+      color: #991b1b;
+    }
+
+    /* Spelling Input */
+    .spell-box {
+      max-width: 460px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .spell-input {
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 1.35rem;
+      font-weight: 800;
+      text-align: center;
+      direction: ltr;
+      border: 2px solid var(--primary);
+      border-radius: 14px;
+      outline: none;
+    }
+
+    .spell-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-check {
+      background: var(--secondary);
+      color: white;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn-hint {
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Match Game */
+    .match-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 680px;
+      margin: 20px auto;
+    }
+
+    .match-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .match-item {
+      padding: 14px;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      cursor: pointer;
+      text-align: center;
+      background: white;
+      transition: all 0.15s;
+    }
+
+    .match-item.selected {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary-dark);
+    }
+
+    .match-item.matched {
+      border-color: var(--secondary);
+      background: #d1fae5;
+      color: #065f46;
+      opacity: 0.65;
+      cursor: default;
+    }
+
+    .match-item.shake {
+      border-color: var(--danger);
+      background: #fee2e2;
+    }
+
+    .feedback-banner {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 14px;
+      font-weight: 700;
+      text-align: center;
+      font-size: 1.08rem;
+      display: none;
+    }
+
+    .feedback-banner.success {
+      display: block;
+      background: #d1fae5;
+      color: #065f46;
+    }
+
+    .feedback-banner.error {
+      display: block;
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .btn-next {
+      margin-top: 16px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: none;
+    }
+
+    .result-box {
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    .result-stars {
+      font-size: 3rem;
+      margin: 14px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.65rem; }
+      .stats-bar { gap: 6px; }
+      .stat-pill { padding: 5px 10px; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo" onclick="goHome()">
+      <div class="logo-badge">Aa</div>
+      <span dir="ltr">English Quest · Grade 7</span>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-pill" title="רצף הצלחות">🔥 <span id="streak-count">0</span></div>
+      <div class="stat-pill" title="כוכבים שנצברו">⭐ <span id="total-stars">0</span>/18</div>
+      <div class="stat-pill" title="נקודות ניסיון">💎 <span id="xp-count">0</span></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME VIEW -->
+    <div id="home-view">
+      <section class="hero">
+        <div class="hero-emojis">🏔️ 🧭 ⛺ 🌍 🏆</div>
+        <div class="hero-tag" dir="ltr">GRADE 7 · BAND 2 & EXTRA LISTS (116 WORDS)</div>
+        <h1>אנגלית זה <span>משחק</span>.<br>מוכן למבחן, עילאי?</h1>
+        <p>שישה אתגרי למידה אינטראקטיביים שמכינים אותך למבחן על כל 116 המילים מהדף: קריאה, השלמת משפטים, הקשר, תרגום, זוגות והכתבה!</p>
+        <div class="hero-actions">
+          <button class="btn-start" onclick="startGame('reading')">מתחילים להתאמן ◀</button>
+          <div class="xp-box">
+            <div class="xp-header">
+              <span id="level-label">רמה 1</span>
+              <span dir="ltr" id="xp-progress-text">0 / 250 XP</span>
+            </div>
+            <div class="xp-track">
+              <div class="xp-fill" id="xp-fill-bar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Practice Scope Selector -->
+      <div class="scope-bar">
+        <span class="scope-label">🎯 בחר על איזו רשימה להתאמן במשחקים (Translate / Match / Spelling):</span>
+        <select id="game-scope-select" class="scope-select">
+          <option value="all">כל 116 המילים (הכנה מלאה למבחן)</option>
+          <option value="list1">רשימה 1: Band 2 חלק א' (30 מילים)</option>
+          <option value="list2">רשימה 2: Band 2 חלק ב' (33 מילים)</option>
+          <option value="list3">רשימה 3: מילים נוספות חלק א' (29 מילים)</option>
+          <option value="list4">רשימה 4: מילים נוספות חלק ב' (24 מילים)</option>
+        </select>
+      </div>
+
+      <h2 class="section-title">🎮 המשחקים למבחן</h2>
+      <p class="section-sub">השלם את כל 6 המשחקים וצבור 18 כוכבים!</p>
+
+      <div class="games-grid">
+        <div class="game-card" onclick="startGame('reading')">
+          <div>
+            <div class="game-card-top">
+              <div class="game-icon">📖</div>
+              <span class="game-badge" dir="ltr">1 · READING</span>
+            </div>
+            <h3>האתגר בפסגת ההר</h3>
+            <p>סיפור הרפתקה ברמת כיתה ז' המשלב מילים מכל הרשימות ושאלות הבנה.</p>
+          </div>
+          <div class="game-card-footer">
+            <div class="stars-display" id="stars-reading">⭐⭐⭐</div>
+            <span class="play-link">שחקו ◀</span>
+          </div>
+        </div>
+
+        <div class="game-card" onclick="startGame('fill')">
+          <div>
+            <div class="game-card-top">
+              <div class="game-icon">🧩</div>
+              <span class="game-badge" dir="ltr">2 · COMPLETE</span>
+            </div>
+            <h3>בנק המילים</h3>
+            <p>משלימים משפטים ברמת כיתה ז' בעזרת המילה המתאימה מהרשימה.</p>
+          </div>
+          <div class="game-card-footer">
+            <div class="stars-display" id="stars-fill">⭐⭐⭐</div>
+            <span class="play-link">שחקו ◀</span>
+          </div>
+        </div>
+
+        <div class="game-card" onclick="startGame('choose')">
+          <div>
+            <div class="game-card-top">
+              <div class="game-icon">🎯</div>
+              <span class="game-badge" dir="ltr">3 · CONTEXT</span>
+            </div>
+            <h3>המילה הנכונה בהקשר</h3>
+            <p>בוחרים בין שתי מילים מהרשימות לפי המשמעות המדויקת של המשפט.</p>
+          </div>
+          <div class="game-card-footer">
+            <div class="stars-display" id="stars-choose">⭐⭐⭐</div>
+            <span class="play-link">שחקו ◀</span>
+          </div>
+        </div>
+
+        <div class="game-card" onclick="startGame('translate')">
+          <div>
+            <div class="game-card-top">
+              <div class="game-icon">🔤</div>
+              <span class="game-badge" dir="ltr">4 · TRANSLATE</span>
+            </div>
+            <h3>מתרגמים (10 שאלות)</h3>
+            <p>מבחן מהיר: שומעים וקוראים מילה באנגלית ובוחרים את הפירוש בעברית.</p>
+          </div>
+          <div class="game-card-footer">
+            <div class="stars-display" id="stars-translate">⭐⭐⭐</div>
+            <span class="play-link">שחקו ◀</span>
+          </div>
+        </div>
+
+        <div class="game-card" onclick="startGame('match')">
+          <div>
+            <div class="game-card-top">
+              <div class="game-icon">🃏</div>
+              <span class="game-badge" dir="ltr">5 · MATCH</span>
+            </div>
+            <h3>זוגות (2 סבבים)</h3>
+            <p>מחברים במהירות 12 מילים באנגלית לפירוש שלהן בעברית.</p>
+          </div>
+          <div class="game-card-footer">
+            <div class="stars-display" id="stars-match">⭐⭐⭐</div>
+            <span class="play-link">שחקו ◀</span>
+          </div>
+        </div>
+
+        <div class="game-card" onclick="startGame('spelling')">
+          <div>
+            <div class="game-card-top">
+              <div class="game-icon">✍️</div>
+              <span class="game-badge" dir="ltr">6 · SPELLING</span>
+            </div>
+            <h3>הכתבה למבחן</h3>
+            <p>שומעים את המילה באנגלית, רואים את הפירוש ומקלידים את האיות הנכון.</p>
+          </div>
+          <div class="game-card-footer">
+            <div class="stars-display" id="stars-spelling">⭐⭐⭐</div>
+            <span class="play-link">שחקו ◀</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title">🗂️ כל המילים למבחן (116 מילים)</h2>
+      <p class="section-sub">לחץ על כרטיס כדי לשמוע את ההגייה באנגלית ולגלות את הפירוש בעברית.</p>
+
+      <div class="vocab-controls">
+        <div class="filter-tabs" id="filter-tabs">
+          <button class="tab-btn active" onclick="filterWords('all', this)">הכל (116)</button>
+          <button class="tab-btn" onclick="filterWords('list1', this)">רשימה 1: Band 2 א'</button>
+          <button class="tab-btn" onclick="filterWords('list2', this)">רשימה 2: Band 2 ב'</button>
+          <button class="tab-btn" onclick="filterWords('list3', this)">רשימה 3: נוספות א'</button>
+          <button class="tab-btn" onclick="filterWords('list4', this)">רשימה 4: נוספות ב'</button>
+        </div>
+        <input type="text" id="word-search" class="search-input" placeholder="🔍 חיפוש מילה בעברית או באנגלית..." oninput="searchWords(this.value)" />
+      </div>
+
+      <div class="words-grid" id="words-grid"></div>
+    </div>
+
+    <!-- ACTIVE GAME VIEW -->
+    <div id="game-screen">
+      <div class="game-top-bar">
+        <button class="btn-back" onclick="goHome()">◀ חזרה לתפריט</button>
+        <h3 id="active-game-title">משחק</h3>
+        <div class="progress-dots" id="progress-dots"></div>
+      </div>
+      <div id="game-content"></div>
+    </div>
+  </main>
+
+  <footer>
+    ההתקדמות נשמרת במכשיר הזה בלבד · Grade 7 Vocabulary Exam Prep — Ilay
+  </footer>
+
+  <script>
+    // Complete 116-word database from all 4 lists in the PDF
+    const VOCAB = [
+      // List 1: Band 2 Part A (Pages 1-2)
+      { en: "able to", he: "מסוגל ל־ / יכול ל־", pron: "אֵייבְּל טוּ", cat: "list1" },
+      { en: "according to", he: "לפי / בהתאם ל־", pron: "אָקוֹרְדִינְג טוּ", cat: "list1" },
+      { en: "air", he: "אוויר", pron: "אֵר", cat: "list1" },
+      { en: "alive", he: "חי / בחיים", pron: "אָלַייב", cat: "list1" },
+      { en: "area", he: "אזור / שטח", pron: "אֶרִיאָה", cat: "list1" },
+      { en: "below", he: "מתחת / למטה", pron: "בִּילוֹאוּ", cat: "list1" },
+      { en: "boat", he: "סירה", pron: "בּוֹאוּט", cat: "list1" },
+      { en: "camp", he: "מחנה / לחנות", pron: "קֶמְפּ", cat: "list1" },
+      { en: "capital", he: "עיר בירה", pron: "קֶפִּיטָל", cat: "list1" },
+      { en: "cause", he: "סיבה / לגרום ל־", pron: "קוֹז", cat: "list1" },
+      { en: "check", he: "לבדוק", pron: "צֶ'ק", cat: "list1" },
+      { en: "city", he: "עיר", pron: "סִיטִי", cat: "list1" },
+      { en: "climb", he: "טיפוס / לטפס", pron: "קְלַיים", cat: "list1" },
+      { en: "cloud", he: "ענן", pron: "קְלָאוּד", cat: "list1" },
+      { en: "compare", he: "להשוות (אל)", pron: "קוֹמְפֶּר", cat: "list1" },
+      { en: "complain", he: "להתלונן", pron: "קוֹמְפְּלֵיין", cat: "list1" },
+      { en: "danger", he: "סכנה", pron: "דֵיינְגֶ'ר", cat: "list1" },
+      { en: "dangerous", he: "מסוכן", pron: "דֵיינְגֶ'רוּס", cat: "list1" },
+      { en: "deal with", he: "להתמודד עם / לטפל ב־", pron: "דִיל וִויד'", cat: "list1" },
+      { en: "depend on", he: "להיות תלוי ב־", pron: "דִיפֶּנְד אוֹן", cat: "list1" },
+      { en: "drop", he: "להפיל / לרדת", pron: "דְרוֹפּ", cat: "list1" },
+      { en: "during", he: "במהלך / במשך", pron: "דְיוּרִינְג", cat: "list1" },
+      { en: "east", he: "מזרח", pron: "אִיסְט", cat: "list1" },
+      { en: "especially", he: "במיוחד", pron: "אֶסְפֶּשָׁלִי", cat: "list1" },
+      { en: "even", he: "אפילו", pron: "אִיבֶן", cat: "list1" },
+      { en: "extreme", he: "קיצוני", pron: "אֶקְסְטְרִים", cat: "list1" },
+      { en: "field", he: "שדה / מגרש", pron: "פִילְד", cat: "list1" },
+      { en: "finger", he: "אצבע (ביד)", pron: "פִינְגֶר", cat: "list1" },
+      { en: "fresh", he: "רענן / טרי", pron: "פְרֶשׁ", cat: "list1" },
+      { en: "ground", he: "אדמה / קרקע", pron: "גְרָאוּנְד", cat: "list1" },
+      { en: "hardly", he: "בקושי", pron: "הָארְדְלִי", cat: "list1" },
+      { en: "heating", he: "חימום / הסקה", pron: "הִיטִינְג", cat: "list1" },
+      { en: "hit", he: "להכות / לפגוע", pron: "הִיט", cat: "list1" },
+      { en: "however", he: "אולם / יחד עם זאת", pron: "הָאוּאֶבֶר", cat: "list1" },
+
+      // List 2: Band 2 Part B (Page 2)
+      { en: "all year round", he: "כל השנה / במשך כל השנה", pron: "אוֹל יִיר רָאוּנְד", cat: "list2" },
+      { en: "average", he: "ממוצע", pron: "אֶבְרִיג'", cat: "list2" },
+      { en: "bones", he: "עצמות", pron: "בּוֹאוּנְז", cat: "list2" },
+      { en: "can't wait", he: "לא יכול לחכות", pron: "קָאנְט וֵוייט", cat: "list2" },
+      { en: "castle", he: "טירה / מבצר", pron: "קָאסֶל", cat: "list2" },
+      { en: "certainly", he: "בוודאי / ללא ספק", pron: "סֶרְטֶנְלִי", cat: "list2" },
+      { en: "challenge", he: "אתגר", pron: "צֶ'לֶנְג'", cat: "list2" },
+      { en: "chin", he: "סנטר", pron: "צִ'ין", cat: "list2" },
+      { en: "close", he: "קרוב", pron: "קְלוֹאוּס", cat: "list2" },
+      { en: "come across", he: "להיתקל ב־ / לפגוש במקרה", pron: "קָאם אֶקְרוֹס", cat: "list2" },
+      { en: "crash", he: "להתרסק / להתנגש", pron: "קְרֶשׁ", cat: "list2" },
+      { en: "curly", he: "מתולתל", pron: "קֶרְלִי", cat: "list2" },
+      { en: "daylight", he: "אור יום", pron: "דֵיי-לַייט", cat: "list2" },
+      { en: "daytime", he: "שעות היום", pron: "דֵיי-טַיים", cat: "list2" },
+      { en: "equator", he: "קו המשווה", pron: "אִיקְוֵוייטֶר", cat: "list2" },
+      { en: "eventually", he: "בסופו של דבר", pron: "אִיבֶנְצ'וּאֶלִי", cat: "list2" },
+      { en: "experienced", he: "מנוסה", pron: "אֶקְסְפִּירִיֶנְסְט", cat: "list2" },
+      { en: "fan", he: "מאוורר / מעריץ", pron: "פֶן", cat: "list2" },
+      { en: "farmer", he: "חקלאי / איכר", pron: "פָארְמֶר", cat: "list2" },
+      { en: "flag", he: "דגל", pron: "פְלֶג", cat: "list2" },
+      { en: "freezing", he: "קפוא / מקפיא", pron: "פְרִיזִינְג", cat: "list2" },
+      { en: "gloves", he: "כפפות", pron: "גְלָאבְז", cat: "list2" },
+      { en: "hang out", he: "לבלות (ביחד)", pron: "הֶנְג אָאוּט", cat: "list2" },
+      { en: "hope", he: "תקווה / לקוות", pron: "הוֹאוּפּ", cat: "list2" },
+      { en: "humid", he: "לח", pron: "הְיוּמִיד", cat: "list2" },
+      { en: "ice", he: "קרח", pron: "אַייס", cat: "list2" },
+      { en: "ice cream cone", he: "גביע גלידה", pron: "אַייס קְרִים קוֹאוּן", cat: "list2" },
+      { en: "image", he: "תמונה / דימוי", pron: "אִימֶג'", cat: "list2" },
+      { en: "in fact", he: "למעשה / בעצם", pron: "אִין פֶקְט", cat: "list2" },
+      { en: "indoors", he: "בתוך מבנה / בבית", pron: "אִין-דוֹרְז", cat: "list2" },
+      { en: "intense", he: "עז / אינטנסיבי", pron: "אִינְטֶנְס", cat: "list2" },
+
+      // List 3: Extra Words Part A (Pages 3-4)
+      { en: "land", he: "לנחות", pron: "לֶנְד", cat: "list3" },
+      { en: "lie down", he: "לשכב / להישכב", pron: "לַאי דָאוּן", cat: "list3" },
+      { en: "make a decision", he: "לקבל החלטה", pron: "מֵייק אָ דִיסִיזֶ'ן", cat: "list3" },
+      { en: "in general", he: "באופן כללי", pron: "אִין גֶ'נֶרָל", cat: "list3" },
+      { en: "in spite of", he: "למרות", pron: "אִין סְפַּייט אוֹב", cat: "list3" },
+      { en: "instead of", he: "במקום", pron: "אִינְסְטֶד אוֹב", cat: "list3" },
+      { en: "last", he: "להימשך (בזמן)", pron: "לָאסְט", cat: "list3" },
+      { en: "local", he: "מקומי", pron: "לוֹקָל", cat: "list3" },
+      { en: "low", he: "נמוך", pron: "לוֹאוּ", cat: "list3" },
+      { en: "mountain", he: "הר", pron: "מָאוּנְטֶן", cat: "list3" },
+      { en: "museum", he: "מוזיאון", pron: "מְיוּזִיאוּם", cat: "list3" },
+      { en: "normal", he: "רגיל / נורמלי", pron: "נוֹרְמָל", cat: "list3" },
+      { en: "notice", he: "להבחין / לשים לב", pron: "נוֹאוּטִיס", cat: "list3" },
+      { en: "opposite", he: "ממול / הפוך", pron: "אוֹפּוֹזִיט", cat: "list3" },
+      { en: "predict", he: "לחזות / לנבא", pron: "פְּרִידִיקְט", cat: "list3" },
+      { en: "probably", he: "כנראה / קרוב לוודאי", pron: "פְּרוֹבָּבְּלִי", cat: "list3" },
+      { en: "reach", he: "להגיע אל / להשיג", pron: "רִיטְשׁ", cat: "list3" },
+      { en: "realize", he: "להבין / לקלוט", pron: "רִיאָלַייז", cat: "list3" },
+      { en: "rise", he: "לעלות / לזרוח (השמש)", pron: "רַייז", cat: "list3" },
+      { en: "river", he: "נהר", pron: "רִיבֶר", cat: "list3" },
+      { en: "season", he: "עונה", pron: "סִיזֶן", cat: "list3" },
+      { en: "serious", he: "רציני", pron: "סִירִיאָס", cat: "list3" },
+      { en: "set", he: "לקבוע / לשקוע (השמש)", pron: "סֶט", cat: "list3" },
+      { en: "several", he: "כמה / אחדים", pron: "סֶבֶרָל", cat: "list3" },
+      { en: "solve", he: "לפתור", pron: "סוֹלְב", cat: "list3" },
+      { en: "spend time", he: "לבלות זמן / להקדיש זמן", pron: "סְפֶּנְד טַיים", cat: "list3" },
+      { en: "strange", he: "מוזר", pron: "סְטְרֵיינְג'", cat: "list3" },
+      { en: "the rest", he: "השאר / היתר", pron: "דֶ'ה רֶסְט", cat: "list3" },
+      { en: "top", he: "פסגה / חלק עליון", pron: "טוֹפּ", cat: "list3" },
+      { en: "toward", he: "לכיוון / לעבר", pron: "טוֹאוֹרְד", cat: "list3" },
+      { en: "vacation", he: "חופשה", pron: "וֵוייקֵיישֶׁן", cat: "list3" },
+      { en: "view", he: "נוף / מראה", pron: "בְיוּ", cat: "list3" },
+      { en: "village", he: "כפר", pron: "וִילִיג'", cat: "list3" },
+      { en: "visit", he: "לבקר", pron: "וִיזִיט", cat: "list3" },
+      { en: "west", he: "מערב", pron: "וֶוסְט", cat: "list3" },
+      { en: "worried", he: "מודאג", pron: "וָוארִיד", cat: "list3" },
+      { en: "zero", he: "אפס", pron: "זִירוֹאוּ", cat: "list3" },
+
+      // List 4: Extra Words Part B (Page 4)
+      { en: "make a dream come true", he: "להגשים חלום", pron: "מֵייק אָ דְרִים קָאם טְרוּ", cat: "list4" },
+      { en: "make it", he: "להצליח להגיע", pron: "מֵייק אִיט", cat: "list4" },
+      { en: "mean", he: "להתכוון / לסמן", pron: "מִין", cat: "list4" },
+      { en: "on top of that", he: "בנוסף לזה / מעבר לכך", pron: "אוֹן טוֹפּ אוֹב דֶ'את", cat: "list4" },
+      { en: "outdoors", he: "בחוץ / באוויר הפתוח", pron: "אָאוּט-דוֹרְז", cat: "list4" },
+      { en: "oxygen", he: "חמצן", pron: "אוֹקְסִיגֶ'ן", cat: "list4" },
+      { en: "recover", he: "להחלים / להתאושש", pron: "רִיקָאבֶר", cat: "list4" },
+      { en: "remain", he: "להישאר", pron: "רִימֵיין", cat: "list4" },
+      { en: "reporter", he: "כתב / עיתונאי", pron: "רִיפּוֹרְטֶר", cat: "list4" },
+      { en: "resident", he: "תושב", pron: "רֶזִידֶנְט", cat: "list4" },
+      { en: "roll down", he: "להתגלגל למטה", pron: "רוֹאוּל דָאוּן", cat: "list4" },
+      { en: "sailor", he: "מלח / ספן", pron: "סֵיילֶר", cat: "list4" },
+      { en: "save a life", he: "להציל חיים", pron: "סֵייב אָ לַייף", cat: "list4" },
+      { en: "set out", he: "לצאת לדרך", pron: "סֶט אָאוּט", cat: "list4" },
+      { en: "shade", he: "צל", pron: "שֵׁייד", cat: "list4" },
+      { en: "shortage", he: "מחסור", pron: "שׁוֹרְטִיג'", cat: "list4" },
+      { en: "sidewalk", he: "מדרכה", pron: "סַייד-ווֹק", cat: "list4" },
+      { en: "skin", he: "עור", pron: "סְקִין", cat: "list4" },
+      { en: "slip", he: "להחליק", pron: "סְלִיפּ", cat: "list4" },
+      { en: "snowball", he: "כדור שלג", pron: "סְנוֹאוּ-בּוֹל", cat: "list4" },
+      { en: "sticky", he: "דביק", pron: "סְטִיקִי", cat: "list4" },
+      { en: "summit", he: "פסגה", pron: "סָאמִיט", cat: "list4" },
+      { en: "sweat", he: "זיעה", pron: "סְוֶוט", cat: "list4" },
+      { en: "take off", he: "להוריד / לפשוט (בגד)", pron: "טֵייק אוֹף", cat: "list4" },
+      { en: "tongue", he: "לשון", pron: "טָאנְג", cat: "list4" },
+      { en: "training", he: "אימון / הכשרה", pron: "טְרֵיינִינְג", cat: "list4" },
+      { en: "uncomfortable", he: "לא נוח", pron: "אָן-קָאמְפְטָבְּל", cat: "list4" },
+      { en: "wet", he: "רטוב", pron: "וֶוט", cat: "list4" }
+    ];
+
+    // Game 1: Grade 7 Reading Story
+    const READING_DATA = {
+      story: `Last winter, Daniel and his <strong>experienced</strong> team of climbers decided to <strong>make a dream come true</strong> and reach the <strong>summit</strong> of a high <strong>mountain</strong>. They <strong>set out</strong> early in the morning, even though the weather was <strong>freezing</strong> and below <strong>zero</strong>. <strong>In spite of</strong> the <strong>extreme</strong> cold and the shortage of <strong>oxygen</strong> near the <strong>top</strong>, nobody wanted to <strong>complain</strong>. During the <strong>climb</strong>, one climber started to <strong>slip</strong> on the <strong>ice</strong>, but the others helped him <strong>recover</strong> safely. <strong>Eventually</strong>, they were <strong>able to</strong> <strong>reach</strong> the peak! The <strong>view</strong> of the <strong>village</strong> and the <strong>river</strong> <strong>below</strong> was amazing, and a local <strong>reporter</strong> wrote a story about their <strong>challenge</strong>.`,
+      questions: [
+        { q: "What dream did Daniel and his team want to make come true?", opts: ["To reach the summit of a high mountain", "To visit a museum in the capital city", "To sail a boat near the equator"], ans: "To reach the summit of a high mountain" },
+        { q: "What was the weather like when they set out?", opts: ["Freezing and below zero", "Hot and humid", "Warm with fresh air"], ans: "Freezing and below zero" },
+        { q: "What problem did they face near the top of the mountain?", opts: ["A shortage of oxygen and extreme cold", "Too many tourists on the sidewalk", "A sticky ice cream cone"], ans: "A shortage of oxygen and extreme cold" },
+        { q: "What happened to one climber during the climb?", opts: ["He started to slip on the ice", "He decided to lie down in a castle", "He lost his gloves in the village"], ans: "He started to slip on the ice" },
+        { q: "What could they see from the summit?", opts: ["The view of the village and the river below", "A farmer working in a field", "A sailor on a boat"], ans: "The view of the village and the river below" }
+      ]
+    };
+
+    // Game 2: Complete the sentence (Grade 7 level)
+    const FILL_QUESTIONS = [
+      { s: "After months of hard ________, the athlete was ready for the race.", opts: ["training", "shortage", "sweat", "shade"], ans: "training" },
+      { s: "It is very hot and ________ near the equator all year round.", opts: ["humid", "freezing", "curly", "sticky"], ans: "humid" },
+      { s: "We decided to stay ________ because of the intense rain outside.", opts: ["indoors", "outdoors", "opposite", "toward"], ans: "indoors" },
+      { s: "According to the weather forecast, the temperature will ________ below zero tonight.", opts: ["drop", "rise", "land", "solve"], ans: "drop" },
+      { s: "She is a very ________ guide; she has climbed this mountain ten times.", opts: ["experienced", "worried", "uncomfortable", "strange"], ans: "experienced" },
+      { s: "People who live in a specific city or village are called ________.", opts: ["residents", "sailors", "reporters", "farmers"], ans: "residents" },
+      { s: "Please ________ your spelling before you hand in the test.", opts: ["check", "predict", "complain", "crash"], ans: "check" },
+      { s: "In spite of the ________, they eventually solved the problem together.", opts: ["challenge", "vacation", "daylight", "image"], ans: "challenge" }
+    ];
+
+    // Game 3: Choose the right word in context
+    const CHOOSE_QUESTIONS = [
+      { s: "Be careful! The wet sidewalk is very slippery and ________.", opts: ["dangerous", "fresh"], ans: "dangerous" },
+      { s: "We couldn't go outdoors, so we stayed inside ________.", opts: ["instead", "especially"], ans: "instead" },
+      { s: "Doctors work hard every day to ________ and help sick people recover.", opts: ["save a life", "hang out"], ans: "save a life" },
+      { s: "Before the sun ________ in the west, we must reach our camp.", opts: ["sets", "rises"], ans: "sets" },
+      { s: "I ________ to go on vacation with my family next week!", opts: ["can't wait", "hardly"], ans: "can't wait" },
+      { s: "When you are hot, ________ appears on your skin.", opts: ["sweat", "oxygen"], ans: "sweat" },
+      { s: "I ________ how late it was until I looked at my watch.", opts: ["didn't realize", "didn't predict"], ans: "didn't realize" },
+      { s: "My wet jacket feels very ________; I want to take it off.", opts: ["uncomfortable", "normal"], ans: "uncomfortable" }
+    ];
+
+    // State
+    let state = JSON.parse(localStorage.getItem('englishQuestGrade7_116')) || {
+      xp: 0,
+      streak: 0,
+      stars: { reading: 0, fill: 0, choose: 0, translate: 0, match: 0, spelling: 0 }
+    };
+
+    function saveState() {
+      localStorage.setItem('englishQuestGrade7_116', JSON.stringify(state));
+      updateHeaderUI();
+    }
+
+    function updateHeaderUI() {
+      document.getElementById('xp-count').textContent = state.xp;
+      document.getElementById('streak-count').textContent = state.streak;
+
+      let totalStars = 0;
+      for (let key in state.stars) {
+        totalStars += state.stars[key];
+        const el = document.getElementById('stars-' + key);
+        if (el) {
+          let html = '';
+          for (let i = 1; i <= 3; i++) {
+            html += i <= state.stars[key] ? '⭐' : '<span class="star-dim">⭐</span>';
+          }
+          el.innerHTML = html;
+        }
+      }
+      document.getElementById('total-stars').textContent = totalStars;
+
+      const level = Math.floor(state.xp / 250) + 1;
+      const currentLevelXp = state.xp % 250;
+      document.getElementById('level-label').textContent = `רמה ${level}`;
+      document.getElementById('xp-progress-text').textContent = `${currentLevelXp} / 250 XP`;
+      document.getElementById('xp-fill-bar').style.width = `${(currentLevelXp / 250) * 100}%`;
+    }
+
+    // Speech Synthesis
+    function speakWord(text, e) {
+      if (e) e.stopPropagation();
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.9;
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    // Flashcards Rendering & Filtering
+    let currentCategory = 'all';
+
+    function renderWordCards(list) {
+      const grid = document.getElementById('words-grid');
+      grid.innerHTML = '';
+
+      list.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'word-card';
+        card.innerHTML = `
+          <button class="speaker-btn" title="השמע מילה" onclick="speakWord('${item.en.replace(/'/g, "\\'")}', event)">🔊</button>
+          <div class="word-en">${item.en}</div>
+          <div class="word-pron">${item.pron}</div>
+          <div class="word-he" style="display:none;">${item.he}</div>
+          <div class="tap-hint">לחץ לפירוש</div>
+        `;
+        card.onclick = () => {
+          speakWord(item.en);
+          const heEl = card.querySelector('.word-he');
+          const hintEl = card.querySelector('.tap-hint');
+          const isFlipped = card.classList.toggle('flipped');
+          heEl.style.display = isFlipped ? 'block' : 'none';
+          hintEl.style.display = isFlipped ? 'none' : 'block';
+        };
+        grid.appendChild(card);
+      });
+    }
+
+    function filterWords(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('word-search').value = '';
+      const filtered = cat === 'all' ? VOCAB : VOCAB.filter(w => w.cat === cat);
+      renderWordCards(filtered);
+    }
+
+    function searchWords(query) {
+      const q = query.trim().toLowerCase();
+      const base = currentCategory === 'all' ? VOCAB : VOCAB.filter(w => w.cat === currentCategory);
+      if (!q) {
+        renderWordCards(base);
+        return;
+      }
+      const filtered = base.filter(w => w.en.toLowerCase().includes(q) || w.he.includes(q));
+      renderWordCards(filtered);
+    }
+
+    function getScopedVocab() {
+      const scope = document.getElementById('game-scope-select').value;
+      return scope === 'all' ? VOCAB : VOCAB.filter(w => w.cat === scope);
+    }
+
+    function goHome() {
+      document.getElementById('game-screen').style.display = 'none';
+      document.getElementById('home-view').style.display = 'block';
+      updateHeaderUI();
+    }
+
+    // Game Engine
+    let currentGame = '';
+    let qIndex = 0;
+    let score = 0;
+    let questionsList = [];
+
+    function shuffle(arr) {
+      return [...arr].sort(() => Math.random() - 0.5);
+    }
+
+    function startGame(type) {
+      currentGame = type;
+      qIndex = 0;
+      score = 0;
+      document.getElementById('home-view').style.display = 'none';
+      document.getElementById('game-screen').style.display = 'block';
+
+      const titles = {
+        reading: '📖 1 · האתגר בפסגת ההר',
+        fill: '🧩 2 · בנק המילים (כיתה ז\')',
+        choose: '🎯 3 · המילה הנכונה בהקשר',
+        translate: '🔤 4 · מתרגמים',
+        match: '🃏 5 · משחק הזוגות',
+        spelling: '✍️ 6 · הכתבה למבחן'
+      };
+      document.getElementById('active-game-title').textContent = titles[type];
+
+      const pool = getScopedVocab();
+
+      if (type === 'reading') {
+        questionsList = READING_DATA.questions;
+        renderQuizStep();
+      } else if (type === 'fill') {
+        questionsList = shuffle(FILL_QUESTIONS);
+        renderQuizStep();
+      } else if (type === 'choose') {
+        questionsList = shuffle(CHOOSE_QUESTIONS);
+        renderQuizStep();
+      } else if (type === 'translate') {
+        const picked = shuffle(pool).slice(0, 10);
+        questionsList = picked.map(word => {
+          const distractors = shuffle(VOCAB.filter(w => w.en !== word.en)).slice(0, 3).map(w => w.he);
+          return {
+            word: word.en,
+            pron: word.pron,
+            opts: shuffle([word.he, ...distractors]),
+            ans: word.he
+          };
+        });
+        renderQuizStep();
+      } else if (type === 'spelling') {
+        questionsList = shuffle(pool).slice(0, 8);
+        renderSpellingStep();
+      } else if (type === 'match') {
+        renderMatchGame(pool);
+      }
+    }
+
+    function renderDots(total, current) {
+      const dotsEl = document.getElementById('progress-dots');
+      dotsEl.innerHTML = '';
+      for (let i = 0; i < total; i++) {
+        const d = document.createElement('div');
+        d.className = 'dot' + (i === current ? ' active' : (i < current ? ' correct' : ''));
+        dotsEl.appendChild(d);
+      }
+    }
+
+    function renderQuizStep() {
+      const content = document.getElementById('game-content');
+      if (qIndex >= questionsList.length) {
+        finishGame(questionsList.length);
+        return;
+      }
+
+      renderDots(questionsList.length, qIndex);
+      const item = questionsList[qIndex];
+      let html = '';
+
+      if (currentGame === 'reading') {
+        html += `<div class="story-box">${READING_DATA.story}</div>`;
+        html += `<div class="question-box"><h3 dir="ltr">${item.q}</h3></div>`;
+      } else if (currentGame === 'translate') {
+        html += `
+          <div class="question-box">
+            <p style="color:var(--muted);">מה הפירוש של המילה:</p>
+            <div class="en-sentence" style="font-size:2rem; cursor:pointer;" onclick="speakWord('${item.word.replace(/'/g, "\\'")}')">
+              🔊 ${item.word}
+              <div style="font-size:0.95rem; color:var(--muted); font-weight:normal;">(${item.pron})</div>
+            </div>
+          </div>`;
+      } else {
+        html += `
+          <div class="question-box">
+            <p style="color:var(--muted);">בחר את המילה המתאימה למשפט:</p>
+            <div class="en-sentence">${item.s}</div>
+          </div>`;
+      }
+
+      html += `<div class="options-grid">`;
+      item.opts.forEach(opt => {
+        const dirAttr = currentGame === 'translate' ? 'dir="rtl"' : 'dir="ltr"';
+        html += `<button class="option-btn" ${dirAttr} onclick="checkAnswer(this, '${opt.replace(/'/g, "\\'")}', '${item.ans.replace(/'/g, "\\'")}')">${opt}</button>`;
+      });
+      html += `</div>
+        <div id="feedback-banner" class="feedback-banner"></div>
+        <div style="text-align:center;">
+          <button id="btn-next" class="btn-next" onclick="nextQuestion()">לשאלה הבאה ◀</button>
+        </div>`;
+
+      content.innerHTML = html;
+      if (currentGame === 'translate') speakWord(item.word);
+    }
+
+    function checkAnswer(btn, chosen, correct) {
+      const allBtns = document.querySelectorAll('.option-btn');
+      allBtns.forEach(b => b.disabled = true);
+
+      const banner = document.getElementById('feedback-banner');
+      if (chosen === correct) {
+        btn.classList.add('correct');
+        score++;
+        state.xp += 15;
+        state.streak++;
+        banner.textContent = 'כל הכבוד! תשובה נכונה (+15 XP) 🎉';
+        banner.className = 'feedback-banner success';
+      } else {
+        btn.classList.add('wrong');
+        state.streak = 0;
+        allBtns.forEach(b => {
+          if (b.textContent === correct) b.classList.add('correct');
+        });
+        banner.textContent = `כמעט! התשובה הנכונה היא: ${correct}`;
+        banner.className = 'feedback-banner error';
+      }
+
+      saveState();
+      document.getElementById('btn-next').style.display = 'inline-block';
+    }
+
+    function nextQuestion() {
+      qIndex++;
+      if (currentGame === 'spelling') renderSpellingStep();
+      else renderQuizStep();
+    }
+
+    // Spelling Game
+    function renderSpellingStep() {
+      const content = document.getElementById('game-content');
+      if (qIndex >= questionsList.length) {
+        finishGame(questionsList.length);
+        return;
+      }
+
+      renderDots(questionsList.length, qIndex);
+      const item = questionsList[qIndex];
+
+      content.innerHTML = `
+        <div class="question-box">
+          <p style="color:var(--muted);">הקשיבו למילה וכתבו אותה באנגלית:</p>
+          <div class="en-sentence" style="cursor:pointer;" onclick="speakWord('${item.en.replace(/'/g, "\\'")}')">
+            🔊 לחצו לשמיעה חוזרת
+            <div style="font-size:1.3rem; color:var(--primary); margin-top:8px;" dir="rtl">פירוש: ${item.he}</div>
+          </div>
+          <div class="spell-box">
+            <input type="text" id="spell-input" class="spell-input" placeholder="Type in English..." autocomplete="off" onkeydown="if(event.key==='Enter') checkSpelling()" />
+            <div id="spell-hint-text" style="color:var(--muted); font-size:0.95rem; font-weight:700;"></div>
+            <div class="spell-actions">
+              <button class="btn-check" id="btn-check-spell" onclick="checkSpelling()">בדיקה ✔</button>
+              <button class="btn-hint" onclick="showSpellHint()">רמז 💡</button>
+            </div>
+          </div>
+        </div>
+        <div id="feedback-banner" class="feedback-banner"></div>
+        <div style="text-align:center;">
+          <button id="btn-next" class="btn-next" onclick="nextQuestion()">למילה הבאה ◀</button>
+        </div>
+      `;
+
+      speakWord(item.en);
+      setTimeout(() => document.getElementById('spell-input').focus(), 100);
+    }
+
+    function showSpellHint() {
+      const target = questionsList[qIndex].en;
+      const masked = target.split('').map((ch, idx) => (idx === 0 || ch === ' ' || idx === target.length - 1) ? ch : '_').join(' ');
+      document.getElementById('spell-hint-text').textContent = `רמז: ${masked} (${target.length} תווים)`;
+    }
+
+    function checkSpelling() {
+      const inputEl = document.getElementById('spell-input');
+      const checkBtn = document.getElementById('btn-check-spell');
+      if (inputEl.disabled) return;
+
+      const userVal = inputEl.value.trim().toLowerCase();
+      const targetVal = questionsList[qIndex].en.toLowerCase();
+      if (!userVal) return;
+
+      inputEl.disabled = true;
+      checkBtn.disabled = true;
+      const banner = document.getElementById('feedback-banner');
+
+      if (userVal === targetVal) {
+        score++;
+        state.xp += 20;
+        state.streak++;
+        inputEl.style.borderColor = 'var(--secondary)';
+        inputEl.style.background = '#d1fae5';
+        banner.textContent = 'איות מושלם! (+20 XP) 🌟';
+        banner.className = 'feedback-banner success';
+      } else {
+        state.streak = 0;
+        inputEl.style.borderColor = 'var(--danger)';
+        inputEl.style.background = '#fee2e2';
+        banner.innerHTML = `כמעט! האיות הנכון הוא: <strong dir="ltr">${questionsList[qIndex].en}</strong>`;
+        banner.className = 'feedback-banner error';
+      }
+
+      saveState();
+      document.getElementById('btn-next').style.display = 'inline-block';
+    }
+
+    // Match Game (2 rounds of 6 pairs)
+    let matchRound = 0;
+    let selectedEn = null;
+    let selectedHe = null;
+    let matchedCount = 0;
+    let matchPool = [];
+
+    function renderMatchGame(pool) {
+      matchRound = 0;
+      matchPool = pool;
+      startMatchRound();
+    }
+
+    function startMatchRound() {
+      if (matchRound >= 2) {
+        score = 12;
+        finishGame(12);
+        return;
+      }
+      renderDots(2, matchRound);
+      selectedEn = null;
+      selectedHe = null;
+      matchedCount = 0;
+
+      const pairs = shuffle(matchPool).slice(0, 6);
+      const leftWords = shuffle(pairs);
+      const rightWords = shuffle(pairs);
+
+      const content = document.getElementById('game-content');
+      content.innerHTML = `
+        <p style="text-align:center; color:var(--muted); margin-bottom:10px;">סבב ${matchRound + 1} מתוך 2: חברו בין כל מילה באנגלית לפירוש שלה בעברית</p>
+        <div class="match-container">
+          <div class="match-col" id="col-en">
+            ${leftWords.map(w => `<div class="match-item" dir="ltr" data-val="${w.en.replace(/"/g, '&quot;')}" onclick="selectMatch('en', this)">${w.en}</div>`).join('')}
+          </div>
+          <div class="match-col" id="col-he">
+            ${rightWords.map(w => `<div class="match-item" data-val="${w.en.replace(/"/g, '&quot;')}" onclick="selectMatch('he', this)">${w.he}</div>`).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function selectMatch(side, el) {
+      if (el.classList.contains('matched')) return;
+
+      if (side === 'en') {
+        speakWord(el.dataset.val);
+        document.querySelectorAll('#col-en .match-item').forEach(i => i.classList.remove('selected'));
+        el.classList.add('selected');
+        selectedEn = el;
+      } else {
+        document.querySelectorAll('#col-he .match-item').forEach(i => i.classList.remove('selected'));
+        el.classList.add('selected');
+        selectedHe = el;
+      }
+
+      if (selectedEn && selectedHe) {
+        if (selectedEn.dataset.val === selectedHe.dataset.val) {
+          selectedEn.classList.remove('selected');
+          selectedHe.classList.remove('selected');
+          selectedEn.classList.add('matched');
+          selectedHe.classList.add('matched');
+          state.xp += 10;
+          state.streak++;
+          saveState();
+          matchedCount++;
+          selectedEn = null;
+          selectedHe = null;
+
+          if (matchedCount === 6) {
+            setTimeout(() => {
+              matchRound++;
+              startMatchRound();
+            }, 600);
+          }
+        } else {
+          const e1 = selectedEn, e2 = selectedHe;
+          e1.classList.add('shake');
+          e2.classList.add('shake');
+          state.streak = 0;
+          saveState();
+          selectedEn = null;
+          selectedHe = null;
+          setTimeout(() => {
+            e1.classList.remove('selected', 'shake');
+            e2.classList.remove('selected', 'shake');
+          }, 450);
+        }
+      }
+    }
+
+    function finishGame(total) {
+      const ratio = score / total;
+      let earnedStars = 1;
+      if (ratio >= 0.85) earnedStars = 3;
+      else if (ratio >= 0.5) earnedStars = 2;
+
+      if (earnedStars > state.stars[currentGame]) {
+        state.stars[currentGame] = earnedStars;
+      }
+      state.xp += 35;
+      saveState();
+
+      const starsHtml = '⭐'.repeat(earnedStars) + '<span class="star-dim">⭐</span>'.repeat(3 - earnedStars);
+      document.getElementById('game-content').innerHTML = `
+        <div class="result-box">
+          <h2>כל הכבוד עילאי! סיימת את השלב! 🏆</h2>
+          <div class="result-stars">${starsHtml}</div>
+          <p style="font-size:1.15rem; margin-bottom:24px;">הצלחת ב-<strong>${score}</strong> מתוך <strong>${total}</strong> שאלות וקיבלת בונוס <strong>+35 XP</strong>!</p>
+          <button class="btn-start" onclick="goHome()">המשך למשחק הבא ◀</button>
+        </div>
+      `;
+    }
+
+    // Initialize
+    updateHeaderUI();
+    renderWordCards(VOCAB);
+  </script>
+</body>
+</html>
